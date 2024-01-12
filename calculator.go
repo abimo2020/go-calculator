@@ -1,4 +1,4 @@
-package main
+package go_calculator
 
 func Calculator(values ...int) (addition, multiply int) {
 	result := 0
