@@ -1,13 +1,11 @@
 package main
 
-import "fmt"
-
-func Calculator(values ...int) {
+func Calculator(values ...int) (addition, multiply int) {
 	result := 0
 	for _, v := range values {
 		result += v
 	}
-	fmt.Printf("The result of addition : %d\n", result)
+	addition = result
 
 	result = 0
 	for i, v := range values {
@@ -17,5 +15,7 @@ func Calculator(values ...int) {
 			result *= v
 		}
 	}
-	fmt.Printf("The result of multiplication : %d\n", result)
+	multiply = result
+
+	return
 }
